@@ -93,9 +93,15 @@ const InvitationPreview: React.FC<Props> = ({ data }) => {
       
       const maxNivedakWidth = targetWidth * 0.94; 
       const nivedakLineHeight = 62;
-      const nivedakY = 1685;
+      const nivedakY = 1675; // Adjusted from 1685 to 1675
       
       drawCenteredWrappedText(ctx, data.nivedak, targetWidth / 2, nivedakY, maxNivedakWidth, nivedakLineHeight, 2);
+
+      // 6. Website Credit - Added as per request
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'; 
+      ctx.font = '300 24px "Poppins"';
+      ctx.fillText('www.creativeteacherstool.in', targetWidth / 2, 1775);
     };
 
     templateImg.onerror = () => {

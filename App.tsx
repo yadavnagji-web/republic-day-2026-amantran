@@ -184,7 +184,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="mt-12 text-center text-slate-400 text-sm pb-8 hindi-font">
-        © 2026 आमंत्रण कार्ड निर्माता - राष्ट्र प्रथम
+        www.creativeteacherstool.in
       </footer>
     </div>
   );

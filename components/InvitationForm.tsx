@@ -75,14 +75,16 @@ const InvitationForm: React.FC<Props> = ({ initialData, onUpdate, onBack, onNext
           </div>
           <div>
             <label className="block text-sm font-bold text-slate-600 mb-2 hindi-font">4. समय (बजे)</label>
-            <input
-              type="text"
+            <select
               name="time"
               value={data.time}
               onChange={handleChange}
-              placeholder="8"
-              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 outline-none transition-all font-medium hindi-font text-black"
-            />
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 outline-none transition-all font-medium hindi-font text-black bg-white cursor-pointer"
+            >
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
+                <option key={num} value={num}>{num}</option>
+              ))}
+            </select>
           </div>
         </div>
 
